@@ -37,6 +37,7 @@ minimal options :
         }
 
 Supported options : 
+
     options = {
         'sd_video_url' : 'http://video_sd.mp4',      //Give your videp file url
         'hd_video_url' : 'http://video_hd.mp4',      //Can play different video file on large screens of Hidef screens if given
