@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>mobilevid</title>
+        
+        <meta name = "viewport" content = "user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <!-- Les styles -->
+        <link href="./css/mobilevid.css" rel="stylesheet">
+        
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+    </head>
+    <body>
+
+    <div>
+        <video id="video_1">
+        </video>
+    </div>
+
+    <script src="./js/mobilevid.js"></script>
+    <script type="text/javascript">
+        (function($) {
+            $.ready($.mobileVideo('#video_1', {sd_video_url: 'http://v2v.cc/~j/theora_testsuite/320x240.ogg'}));
+        })(jQuery);
+    
+    </script>
+
+    </body>
+</html>
