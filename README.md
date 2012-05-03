@@ -1,7 +1,7 @@
 # jQuery-MobileVid #
 
 This (really small) jQuery module is aimed at embedding easily videos on a mobile page.
-This module is aimed providing the best video experience on tablet. 
+This module is aimed providing the best video experience on smartphones and tablets. 
 No fancy theming, no unusefull js, it uses only HTLM5 video tag to display corectly a video on majors smartphones and tablets.
 
 
