@@ -41,6 +41,5 @@ Supported options :
     options = {
         'sd_video_url' : 'http://video_sd.mp4',      //Give your videp file url
         'hd_video_url' : 'http://video_hd.mp4',      //Can play different video file on large screens of Hidef screens if given
-        'poster' : true,                             //Show or hide poster
-        'poster_url' : './img/illustration.jpg'      //Set poster image
+        'poster_url' : './img/illustration.jpg'      //Set poster image, if none, defaut terminal poster is shown
     };

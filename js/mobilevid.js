@@ -22,10 +22,6 @@
 
         //default config
         var config = {
-            /*'sd_video_url' : 'http://player.vimeo.com/external/40863168.mobile.mp4?s=4471d59a07fc00f4c2e4359cf142696f',
-            'hd_video_url' : 'http://player.vimeo.com/external/40863168.sd.mp4?s=0442c7d1e745775d5c840e655e94b047',*/
-            'poster' : false,
-            'poster_url' : './img/illustration.jpg'
         };
         if (settings){$.extend(config, settings);}
         
@@ -56,7 +52,7 @@
         var container = $('#mobilevid_'+_selector);
         
         
-        if(config.poster)
+        if(config.poster_url !== undefined)
             _vid.attr('poster', config.poster_url);
     
         //we load hd version of the video on large ipad screen and high density pixel screens
@@ -76,9 +72,8 @@
         {
             _vid.attr("controls",true);
         }
-        //play button activated by default on iPhone / iPod so we only add a play button on other devices.
         else if(!((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)))) {
-            
+            //play button activated by default on iPhone / iPod so we only add a play button on other devices.
             container.children('.play-control').addClass('play-button ');
     
             _vid.click(function(){
