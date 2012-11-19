@@ -22,9 +22,11 @@
           <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         <style>
-            body{
-                padding-top: 40px;
-                position: relative;
+            @media screen and (min-width: 1024px) {
+                body{
+                    padding-top: 40px;
+                    position: relative;
+                }
             }
         </style>
 
@@ -32,20 +34,13 @@
     <body>
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
-                <div class="container">
+                <div class="container-fluid">
                     <a href="./index.html" class="brand">jQuery MobileVid</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li class="active">
-                                <a href="./index.html">Home</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="container-fluid">
+        <div class="container">
             <div class="row-fluid">
                 <h1><a href="#jquery-mobilevid" class="anchor" name="jquery-mobilevid"><span class="mini-icon mini-icon-link"></span></a>jQuery-MobileVid</h1>
 
