@@ -6,31 +6,126 @@
         
         <meta name = "viewport" content = "user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
         <meta name="apple-mobile-web-app-capable" content="yes"/>
-        
+
+
         <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+
         <!-- Les styles -->
-        <link href="./css/mobilevid.css" rel="stylesheet">
-        
+        <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+        <link href="https://github.com/t0k4rt/jquery-mobilevid/raw/master/css/mobilevid.css" rel="stylesheet">
+
         <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
           <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        
+
     </head>
     <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a href="./index.html" class="brand">jQuery MobileVid</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active">
+                                <a href="./index.html">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <div>
-        <video id="video_1">
-        </video>
-    </div>
+        <div class="container">
+            <div class="row">
+                <h1><a href="#jquery-mobilevid" class="anchor" name="jquery-mobilevid"><span class="mini-icon mini-icon-link"></span></a>jQuery-MobileVid</h1>
 
-    <script src="./js/mobilevid.js"></script>
-    <script type="text/javascript">
-        (function($) {
-            $.ready($.mobileVideo('#video_1', {sd_video_url: 'http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'}));
-        })(jQuery);
-    
-    </script>
+                <p>This (really small) jQuery module is aimed at embedding easily videos on a mobile page.
+                This module is aimed providing the best video experience on smartphones and tablets.
+                No fancy theming, no unusefull js, it uses only HTLM5 video tag to display corectly a video on majors smartphones and tablets.</p>
+
+                <h2><a href="#compatibility" class="anchor" name="compatibility"><span class="mini-icon mini-icon-link"></span></a>Compatibility</h2>
+
+                <p>Tested on :</p>
+
+                <ul>
+                    <li>iPhone with iOs &gt;= 4.0</li>
+                    <li>Android smartphones with Android &gt;= 2.1</li>
+                    <li>iPad iOs &gt;= 3.2</li>
+                    <li>Should work well on Android Tablets</li>
+                </ul>
+
+                <h2><a href="#requirements" class="anchor" name="requirements"><span class="mini-icon mini-icon-link"></span></a>Requirements</h2>
+
+                <ul>
+                    <li>tested with jQuery 1.7.</li>
+                    <li>must be working with at least jQuery 1.4</li>
+                </ul>
+
+                <h2><a href="#to-get-started" class="anchor" name="to-get-started"><span class="mini-icon mini-icon-link"></span></a>To get started</h2>
+
+                <p>Add a video tag in your code :</p>
+
+                <pre>
+                    <code>
+                        &lt;video id="video_1"&gt;
+                        &lt;/video&gt;
+                    </code>
+                </pre>
+
+                <p>And use : </p>
+
+                <pre>
+                    <code>
+                        $.mobileVideo('#video_1', options)
+                    </code>
+                </pre>
+
+                <p>minimal options :</p>
+
+                <pre>
+                    <code>
+                        options = {
+                            'sd_video_url' : 'http://video_sd.mp4'
+                        }
+                    </code>
+                </pre>
+
+                <p>Supported options : </p>
+
+                <pre>
+                    <code>
+                        options = {
+                            'sd_video_url' : 'http://video_sd.mp4',      //Give your videp file url
+                            'hd_video_url' : 'http://video_hd.mp4',      //Can play different video file on large screens of Hidef screens if given
+                            'poster_url' : './img/illustration.jpg'      //Set poster image, if none, defaut terminal poster is shown
+                        };
+                    </code>
+                </pre>
+
+
+                <h2><a href="#to-get-started" class="anchor" name="to-get-started"><span class="mini-icon mini-icon-link"></span></a>Example</h2>
+                <div id="example">
+                    <video id="video_1">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="https://github.com/t0k4rt/jquery-mobilevid/raw/master/js/mobilevid.js"></script>
+
+        <script type="text/javascript">
+            (function($) {
+                $.ready($.mobileVideo('#video_1', {sd_video_url: 'http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'}));
+            })(jQuery);
+
+    ://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'}));
+            })(jQuery);
+
+        </script>
 
     </body>
 </html>
