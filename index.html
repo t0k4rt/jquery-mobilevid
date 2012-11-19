@@ -19,6 +19,12 @@
         <!--[if lt IE 9]>
           <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+        <style>
+            body{
+                padding-top: 40px;
+                position: relative;
+            }
+        </style>
 
     </head>
     <body>
@@ -69,8 +75,8 @@
 
                 <pre>
                     <code>
-                        &lt;video id="video_1"&gt;
-                        &lt;/video&gt;
+&lt;video id="video_1"&gt;
+&lt;/video&gt;
                     </code>
                 </pre>
 
@@ -78,7 +84,7 @@
 
                 <pre>
                     <code>
-                        $.mobileVideo('#video_1', options)
+$.mobileVideo('#video_1', options)
                     </code>
                 </pre>
 
@@ -86,9 +92,9 @@
 
                 <pre>
                     <code>
-                        options = {
-                            'sd_video_url' : 'http://video_sd.mp4'
-                        }
+options = {
+  'sd_video_url' : 'http://video_sd.mp4'
+}
                     </code>
                 </pre>
 
@@ -96,11 +102,11 @@
 
                 <pre>
                     <code>
-                        options = {
-                            'sd_video_url' : 'http://video_sd.mp4',      //Give your videp file url
-                            'hd_video_url' : 'http://video_hd.mp4',      //Can play different video file on large screens of Hidef screens if given
-                            'poster_url' : './img/illustration.jpg'      //Set poster image, if none, defaut terminal poster is shown
-                        };
+options = {
+  'sd_video_url' : 'http://video_sd.mp4',      //Give your videp file url
+  'hd_video_url' : 'http://video_hd.mp4',      //Can play different video file on large screens of Hidef screens if given
+  'poster_url' : './img/illustration.jpg'      //Set poster image, if none, defaut terminal poster is shown
+};
                     </code>
                 </pre>
 
@@ -121,10 +127,6 @@
             (function($) {
                 $.ready($.mobileVideo('#video_1', {sd_video_url: 'http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'}));
             })(jQuery);
-
-    ://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'}));
-            })(jQuery);
-
         </script>
 
     </body>
