@@ -45,9 +45,6 @@
         if(vid.length > 1)
             throw 'Multiple video tag selected';
 
-        //set controls to false
-        _vid.attr("controls",false);
-
 
         //Set defautl hd url if not available
         if(config.hd_video_url === undefined)
@@ -63,7 +60,10 @@
         var _selector = selector.substring(1);
         parent.html('<div id="mobilevid_'+_selector+'" class="mobilevid_container"><div class="play-control"></div></div>');
         var container = $('#mobilevid_'+_selector);
-        
+
+        //set controls to false
+        _vid.attr("controls",false);
+
         //set poster if provided
         if(config.poster_url !== undefined)
             _vid.attr('poster', config.poster_url);
