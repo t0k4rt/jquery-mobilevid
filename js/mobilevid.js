@@ -20,6 +20,9 @@
 (function($){
     $.mobileVideo = function(selector, settings){
 
+
+        /************** plugin initialisation **************/
+
         //default config
         var config = {
         };
@@ -28,30 +31,40 @@
         //Test if mandatory options are here
         if(config.sd_video_url === undefined)
             throw 'At least one sd_video_url must be given';
-        
-        //Get selected elements
-        var vid = $('video' + selector);
-        
+
         //html5 video support test :
         if(!document.createElement('video').canPlayType)
             throw 'HTML5 video unsupported';
-            
+
+        //Get selected elements
+        var vid = $('video' + selector);
+
         //Parameters check : only one video tag must be selected 
         if(vid[0] === undefined)
             throw 'Selected element is empty';
         if(vid.length > 1)
             throw 'Multiple video tag selected';
-            
+
+        //set controls to false
+        _vid.attr("controls",false);
+
+
+        //Set defautl hd url if not available
         if(config.hd_video_url === undefined)
             config.hd_video_url = config.sd_video_url;
-        
+
+
+        /************** plugin initialisation **************/
+
+        //we clone dom vid node
         var _vid = vid.clone();
         var parent = vid.parent();
+
         var _selector = selector.substring(1);
         parent.html('<div id="mobilevid_'+_selector+'" class="mobilevid_container"><div class="play-control"></div></div>');
         var container = $('#mobilevid_'+_selector);
         
-        
+        //set poster if provided
         if(config.poster_url !== undefined)
             _vid.attr('poster', config.poster_url);
     
