@@ -1,0 +1,43 @@
+[id^='video'] {
+    width: 100%;
+}
+
+
+.mobilevid_container {
+    position: relative;
+    padding: 5px;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.play-button {
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 45px;
+    background: transparent url('../img/playsmall.png') no-repeat;
+    bottom: 10px;
+    left: 10px;
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+	only screen and (min-device-pixel-ratio: 1.5) {
+    
+    .play-button {
+        background: transparent url('../img/play.png') no-repeat;
+        width: 60px;
+        height: 45px;
+        -webkit-background-size: 100% 100%;
+        -moz-background-size: 100% 100%;
+        -o-background-size: 100% 100%;
+        background-size: 100% 100%;
+    }
+}
+
