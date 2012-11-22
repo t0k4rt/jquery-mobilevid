@@ -80,6 +80,21 @@
             _vid[0].load();
         }
 
+
+        //we stop video when we go out fullscreen
+        $(document).on("webkitfullscreenchange", function() {
+            if(!document.webkitIsFullScreen)
+                _vid[0].pause();
+            //console.log("webkitfullscreenchange");
+        });
+
+        //we close video at the end
+        _vid.on("ended", function() {
+            $(this).webkitExitFullScreen();
+        });
+
+
+
         //we display controls on tablets
         //if(screen.width/window.devicePixelRatio >= 768)
         if(window.innerWidth >= 768)
@@ -91,16 +106,19 @@
             container.children('.play-control').addClass('play-button ');
     
             _vid.click(function(){
-                _vid[0].webkitEnterFullscreen&&_vid[0].webkitEnterFullscreen();
+                //small fix to trigger fullscreen on samsung galaxy SIII
+                _vid[0].webkitEnterFullscreen && _vid[0].webkitEnterFullscreen();
                 _vid[0].play();
             });
             
             container.children('.play-control').click(function(){
-                _vid[0].webkitEnterFullscreen&&_vid[0].webkitEnterFullscreen();
+                //small fix to trigger fullscreen on samsung galaxy SIII
+                _vid[0].webkitEnterFullscreen && _vid[0].webkitEnterFullscreen();
                 _vid[0].play();
             }); 
         }
-        
+
+
         //we have to clone our vid with the new parameters. We also fix width for windows phone terminals
         _vid.prependTo(container).css('width', '100%');
         vid.remove();
