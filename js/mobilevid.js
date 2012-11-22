@@ -81,7 +81,7 @@
         }
     
         //we display controls on tablets
-        if(screen.width >= 768)
+        if(screen.width/window.devicePixelRatio >= 768)
         {
             _vid.attr("controls",true);
         }
