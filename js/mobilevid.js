@@ -85,12 +85,12 @@
         $(document).on("webkitfullscreenchange", function() {
             if(!document.webkitIsFullScreen)
                 _vid[0].pause();
-            //console.log("webkitfullscreenchange");
+            console.log("webkitfullscreenchange");
         });
 
         //we close video at the end
         _vid.on("ended", function() {
-            $(this).webkitExitFullScreen();
+            _vid[0].webkitExitFullScreen();
         });
 
 
