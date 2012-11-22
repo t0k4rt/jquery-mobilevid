@@ -69,7 +69,7 @@
             _vid.attr('poster', config.poster_url);
     
         //we load hd version of the video on large ipad screen and high density pixel screens
-        if(screen.width >= 768 || window.devicePixelRatio > 1.5)
+        if(window.innerWidth >= 768 || window.devicePixelRatio > 1.5)
         {
             _vid[0].src = config.hd_video_url;
             _vid[0].load();
@@ -81,7 +81,8 @@
         }
 
         //we display controls on tablets
-        if(screen.width/window.devicePixelRatio >= 768)
+        //if(screen.width/window.devicePixelRatio >= 768)
+        if(window.innerWidth >= 768)
         {
             _vid.attr("controls",true);
         }
@@ -90,10 +91,12 @@
             container.children('.play-control').addClass('play-button ');
     
             _vid.click(function(){
+                _vid[0].webkitEnterFullscreen&&_vid[0].webkitEnterFullscreen();
                 _vid[0].play();
             });
             
             container.children('.play-control').click(function(){
+                _vid[0].webkitEnterFullscreen&&_vid[0].webkitEnterFullscreen();
                 _vid[0].play();
             }); 
         }
