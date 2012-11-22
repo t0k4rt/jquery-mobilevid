@@ -79,7 +79,7 @@
             _vid[0].src = config.sd_video_url;
             _vid[0].load();
         }
-    
+
         //we display controls on tablets
         if(screen.width/window.devicePixelRatio >= 768)
         {
