@@ -116,13 +116,13 @@
     
             _vid.click(function(){
                 //small fix to trigger fullscreen on samsung galaxy SIII
-                _vid[0].webkitEnterFullscreen && _vid[0].webkitEnterFullscreen();
+                _vid[0].webkitEnterFullscreen();
                 _vid[0].play();
             });
             
             container.children('.play-control').click(function(){
                 //small fix to trigger fullscreen on samsung galaxy SIII
-                _vid[0].webkitEnterFullscreen && _vid[0].webkitEnterFullscreen();
+                //_vid[0].webkitEnterFullscreen && _vid[0].webkitEnterFullscreen();
                 _vid[0].play();
             }); 
         }
