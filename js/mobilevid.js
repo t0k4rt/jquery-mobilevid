@@ -116,8 +116,9 @@
     
             _vid.click(function(){
                 //small fix to trigger fullscreen on samsung galaxy SIII
-                //_vid[0].webkitEnterFullscreen();
                 _vid[0].play();
+                _vid[0].webkitEnterFullscreen && _vid[0].webkitEnterFullscreen();
+                
             });
             
             container.children('.play-control').click(function(){
