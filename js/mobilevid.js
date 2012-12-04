@@ -82,11 +82,11 @@
 
 
         //we stop video when we go out fullscreen (on safari and chrome desktop)
-        /*$(document).on("webkitfullscreenchange", function() {
+        $(document).on("webkitfullscreenchange", function() {
             if(!document.webkitIsFullScreen)
                 _vid[0].pause();
             console.log("webkitfullscreenchange");
-        });*/
+        });
 
         //we stop video when we go out fullscreen (on safari and chrome mobile)
         _vid[0].addEventListener("webkitendfullscreen", function() {
@@ -116,15 +116,16 @@
     
             _vid.click(function(){
                 //small fix to trigger fullscreen on samsung galaxy SIII
+                //Important : play()  while fullscreen trigger webkitExitFullScreen !
                 _vid[0].play();
                 _vid[0].webkitEnterFullscreen && _vid[0].webkitEnterFullscreen();
-                
             });
             
             container.children('.play-control').click(function(){
                 //small fix to trigger fullscreen on samsung galaxy SIII
-                //_vid[0].webkitEnterFullscreen && _vid[0].webkitEnterFullscreen();
+                //Important : play()  while fullscreen trigger webkitExitFullScreen !
                 _vid[0].play();
+                _vid[0].webkitEnterFullscreen && _vid[0].webkitEnterFullscreen();
             }); 
         }
 
