@@ -91,7 +91,7 @@
         //we stop video when we go out fullscreen (on safari and chrome mobile)
         _vid[0].addEventListener("webkitendfullscreen", function() {
             _vid[0].pause();
-            console.log("webkitfullscreenchange");
+            console.log("event webkitendfullscreenchange");
         });
 
 
@@ -99,6 +99,7 @@
         //we close video at the end
         _vid.on("ended", function() {
             _vid[0].webkitExitFullScreen();
+            console.log("event webkitExitFullScreen");
         });
 
 
