@@ -113,6 +113,11 @@
             <video id="video_1">
             </video>
         </div>
+        
+        <div id="example2">
+            <video id="video_2">
+            </video>
+        </div>
 
         <p>&nbsp;</p>
     </div>
@@ -126,6 +131,13 @@
     (function($) {
         $.ready($.mobileVideo('#video_1', {sd_video_url: 'http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'}));
     })(jQuery);
+    
+    (function($) {
+        $.ready($.mobileVideo('#video_2', 
+            {sd_video_url: 'http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4',
+            poster_url: "http://bluegreen.kairostag.com/rueil/illustrations/tee9.jpg"}));
+    })(jQuery);
+    
 </script>
 
 </body>
