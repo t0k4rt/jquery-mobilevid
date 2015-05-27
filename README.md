@@ -1,3 +1,8 @@
+# Important #
+
+This library worked well enough when there was no good html5 video player for mobile. 
+Now you should better use something like this : https://github.com/videojs/video.js
+
 # jQuery-MobileVid #
 
 This (really small) jQuery module is aimed at embedding easily videos on a mobile page.
